@@ -13,16 +13,22 @@
         <link rel="stylesheet" href="{% static 'css/stijl.css' %}">
     </head>
     <body>
-        {% block content %}
-        {% for post in posts %}
-        <article class="post">
-            <time class="date">
-                {{ post.published_date }}
-            </time>
-            <h2 class="bg-success"><a href="">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
-        </article>
-        {% endfor %}
-        {% endblock %}
+        <header>
+            <h1>Mijn website</h1>
+        </header>
+            <div class="article-container">
+                {% block content %}
+                {% for post in posts %}
+                <article class="post">
+                    <time class="date">
+                        {{ post.published_date }}
+                    </time>
+                    <h2 class=""><a href="">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaks }}</p>
+                </article>
+                {#<p class="gap"></p>#}
+                {% endfor %}
+                {% endblock %}
+            </div>
     </body>
 </html>
