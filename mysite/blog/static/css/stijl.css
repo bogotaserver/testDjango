@@ -24,12 +24,6 @@ article {
     background-color: #f3c2bd;
 }
 
-.gap {
-    height: 40px;
-    background-color: #f3c2bd;
-    width: 500px;
-}
-
 .article-container {
     margin: 20px 0 20px;
     display: flex;
